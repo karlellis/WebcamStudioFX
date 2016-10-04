@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.effect.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:id="TrackPanelFX" minHeight="0.0" minWidth="700.0" prefHeight="300.0" prefWidth="979.0" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="webcamstudiofx.TrackPanelFXController">
+   <children>
+      <Separator layoutX="534.0" layoutY="12.0" orientation="VERTICAL" prefHeight="257.0" prefWidth="6.0" AnchorPane.bottomAnchor="38.0" AnchorPane.topAnchor="5.0">
+         <effect>
+            <InnerShadow color="#bcbcbcc2" />
+         </effect></Separator>
+      <ToggleButton fx:id="tglRemote" layoutX="896.0" layoutY="6.0" mnemonicParsing="false" onAction="#tglRemoteAction" text="Remote" AnchorPane.rightAnchor="14.0">
+         <padding>
+            <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+         </padding></ToggleButton>
+      <Label layoutX="548.0" layoutY="59.0" prefHeight="24.0" prefWidth="309.0" text="Selected Track Duration (sec):" AnchorPane.leftAnchor="548.0" AnchorPane.rightAnchor="122.0">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Label>
+      <Label layoutX="627.0" layoutY="112.0" text="Current Track Timer (sec):" AnchorPane.leftAnchor="548.0" AnchorPane.rightAnchor="142.0">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Label>
+      <Pane fx:id="resourcePanel" layoutX="14.0" layoutY="260.0" prefHeight="32.0" prefWidth="670.0" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="14.0" />
+      <Separator layoutX="548.0" layoutY="39.0" prefHeight="2.0" prefWidth="417.0" AnchorPane.leftAnchor="548.0" AnchorPane.rightAnchor="14.0">
+         <effect>
+            <InnerShadow color="#bcbbbbc2" />
+         </effect></Separator>
+      <Separator layoutX="548.0" layoutY="101.0" prefHeight="2.0" prefWidth="417.0" AnchorPane.leftAnchor="548.0" AnchorPane.rightAnchor="14.0">
+         <effect>
+            <InnerShadow color="#bcbcbc" />
+         </effect></Separator>
+      <Label fx:id="lblOnAir" layoutX="873.0" layoutY="270.0" text="ON AIR" AnchorPane.bottomAnchor="5.0" AnchorPane.rightAnchor="14.0">
+         <font>
+            <Font size="26.0" />
+         </font>
+      </Label>
+      <ToolBar layoutX="548.0" layoutY="212.0" prefHeight="40.0" prefWidth="417.0" AnchorPane.bottomAnchor="48.0" AnchorPane.leftAnchor="548.0" AnchorPane.rightAnchor="14.0">
+         <items>
+            <ToggleButton fx:id="tglStartTrack" mnemonicParsing="false" onAction="#tglStartTrackAction" text="Start/Stop" />
+            <Button fx:id="btnSkipTrack" mnemonicParsing="false" onAction="#btnSkipTrackAction" text="Next Track" />
+            <Pane fx:id="sepPane" HBox.hgrow="ALWAYS" />
+            <Button fx:id="btnStopOnlyStreams" mnemonicParsing="false" onAction="#btnStopOnlyStreamsAction" text="Stop Streams" />
+            <Button fx:id="btnStopAllStream" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#btnStopAllStreamAction" text="Stop All" textAlignment="CENTER" />
+         </items>
+      </ToolBar>
+      <ToolBar fx:id="trackToolBar" layoutX="14.0" layoutY="-1.0" prefHeight="40.0" prefWidth="513.0">
+         <items>
+            <Button fx:id="btnUp" contentDisplay="GRAPHIC_ONLY" mnemonicParsing="false" onAction="#btnUpAction" text="Up">
+               <graphic>
+                  <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@resources/tango/go-up.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <tooltip>
+                  <Tooltip prefHeight="26.0" text="Track Up" />
+               </tooltip>
+               <padding>
+                  <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+               </padding></Button>
+            <Button fx:id="btnDown" contentDisplay="GRAPHIC_ONLY" mnemonicParsing="false" onAction="#btnDownAction" text="Down">
+               <graphic>
+                  <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@resources/tango/go-down.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <padding>
+                  <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+               </padding>
+               <tooltip>
+                  <Tooltip text="Track Down" />
+               </tooltip></Button>
+            <Button fx:id="btnJump" mnemonicParsing="false" onAction="#btnJumpAction" text="Jump">
+               <graphic>
+                  <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@resources/tango/jump_button_4.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <padding>
+                  <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+               </padding></Button>
+            <Pane fx:id="growPane" HBox.hgrow="ALWAYS" />
+            <TextField fx:id="txtName" prefWidth="100.0">
+               <tooltip>
+                  <Tooltip text="Track Name" />
+               </tooltip></TextField>
+            <Button fx:id="btnAdd" contentDisplay="GRAPHIC_ONLY" mnemonicParsing="false" onAction="#btnAddAction" text="Add">
+               <graphic>
+                  <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@resources/tango/list-add.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <padding>
+                  <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+               </padding>
+               <tooltip>
+                  <Tooltip text="Add a Track" />
+               </tooltip></Button>
+            <Button fx:id="btnDuplicateTrk" contentDisplay="GRAPHIC_ONLY" mnemonicParsing="false" onAction="#btnDuplicateTrkAction" text="Clone">
+               <graphic>
+                  <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@resources/tango/duplicatebutton.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <padding>
+                  <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+               </padding>
+               <tooltip>
+                  <Tooltip text="Clone selected Track" />
+               </tooltip></Button>
+            <Button fx:id="btnRemove" contentDisplay="GRAPHIC_ONLY" mnemonicParsing="false" onAction="#btnRemoveAction" text="Del">
+               <graphic>
+                  <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@resources/tango/process-stop.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <padding>
+                  <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+               </padding>
+               <tooltip>
+                  <Tooltip text="Remove Track" />
+               </tooltip></Button>
+            <Button fx:id="btnClearAllTrk" contentDisplay="GRAPHIC_ONLY" mnemonicParsing="false" onAction="#btnClearAllTrkAction" text="Clear">
+               <graphic>
+                  <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@resources/tango/button-small-clear.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <padding>
+                  <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+               </padding>
+               <tooltip>
+                  <Tooltip text="Remove all Tracks" />
+               </tooltip></Button>
+            <Button fx:id="btnUpdate" contentDisplay="GRAPHIC_ONLY" mnemonicParsing="false" onAction="#btnUpdateAction" text="Update">
+               <graphic>
+                  <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@resources/tango/view-refresh.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <padding>
+                  <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+               </padding>
+               <tooltip>
+                  <Tooltip text="Update Track" />
+               </tooltip></Button>
+         </items>
+      </ToolBar>
+      <AnchorPane fx:id="anchorBar" layoutX="548.0" layoutY="141.0" prefHeight="64.0" prefWidth="442.0" AnchorPane.bottomAnchor="95.0" AnchorPane.leftAnchor="548.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="145.0" />
+      <ListView fx:id="list" layoutX="14.0" layoutY="38.0" prefHeight="212.0" prefWidth="513.0" AnchorPane.bottomAnchor="48.0" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="40.0" />
+   </children>
+</AnchorPane>

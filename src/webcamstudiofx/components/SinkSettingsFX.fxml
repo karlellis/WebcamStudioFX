@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane fx:id="SinkSettingsFX" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="181.0" prefWidth="365.0" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="webcamstudiofx.components.SinkSettingsFXController">
+   <children>
+      <Label fx:id="lblName" layoutX="15.0" layoutY="7.0" text="SinkName">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <CheckBox fx:id="chkHQMode" layoutX="261.0" layoutY="15.0" mnemonicParsing="false" onAction="#chkHQModeAction" text="HQ Mode" AnchorPane.rightAnchor="15.0" />
+      <Label layoutX="15.0" layoutY="46.0" text="Encoding Settings:">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="15.0" layoutY="75.0" text="Video data rate (Kb/sec):" />
+      <Label layoutX="15.0" layoutY="109.0" text="Audio data rate (Kb/sec):" />
+      <Spinner fx:id="spinVideoRateClassic" layoutX="187.0" layoutY="70.0" prefHeight="26.0" prefWidth="163.0" AnchorPane.rightAnchor="15.0" />
+      <Spinner fx:id="spinAudioRateClassic" layoutX="187.0" layoutY="104.0" prefHeight="26.0" prefWidth="163.0" AnchorPane.rightAnchor="15.0" />
+      <Button fx:id="btnOK" layoutX="15.0" layoutY="142.0" mnemonicParsing="false" onAction="#btnOKAction" text="Ok" />
+      <Button fx:id="btnCancel" layoutX="61.0" layoutY="142.0" mnemonicParsing="false" onAction="#btnCancelAction" text="Cancel" />
+   </children>
+</AnchorPane>

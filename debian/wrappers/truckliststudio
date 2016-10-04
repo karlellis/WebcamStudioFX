@@ -1,0 +1,16 @@
+#!/bin/sh
+# WebcamStudio for GNU/Linux Launcher wrapper
+# Copyright (C) 2008 Patrick Balleux <patrick.balleux@gmail.com>
+# Copyright (C) 2013 PhobosK <phobosk@kbfx.net>
+# Copyright (C) 2015 Karl Ellis <soylent.tv@gmail.com>
+# Version 1.0
+
+INSTALLDIR=/usr/lib/truckliststudio
+
+JAVA_CLASSPATH="${INSTALLDIR}/*:${INSTALLDIR}/lib/*"
+
+find_java_runtime openjdk sunmin5
+
+cd ${INSTALLDIR}
+
+java -jar TrucklistStudio.jar

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="webcamstudiofx.AboutTSController">
+   <children>
+      <Label alignment="CENTER" layoutX="121.0" layoutY="11.0" prefHeight="69.0" prefWidth="466.0" text="WebcamStudioFX for GNU/Linux">
+         <font>
+            <Font name="System Bold" size="25.0" />
+         </font>
+      </Label>
+      <TextArea editable="false" layoutX="15.0" layoutY="90.0" prefHeight="265.0" prefWidth="572.0" text="WebcamStudioFX for GNU/Linux&#10;Visit: http://sourceforge.net//projects/webcamstudio&#10;Copyright (c) 2009 Patrick Balleux&#10;Copyright (c) 2016 Karl Ellis&#10;&#10;This program is free software: you can redistribute it and/or modify it under&#10;the terms of the GNU General Public License as published by the Free Software&#10;Foundation, either version 3 of the License, or (at your option) any later version.&#10;&#10;This program is distributed in the hope that it will be useful, but WITHOUT ANY&#10;WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS&#10;FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more&#10;details.&#10;&#10;You should have received a copy of the GNU General Public License along with&#10;this program. If not, see &lt;http://www.gnu.org/licenses/&gt;.&#10;&#10;******************************************&#10;&#10;Media reading is done with GStreamer / AVconv / FFmpeg  media libraries:&#10;http://libav.org/&#10;http://www.ffmpeg.org/&#10;http://gstreamer.freedesktop.org/&#10;&#10;Splash/Background image by Hipdad (modified by Karl Ellis)&#10;(Thanks Chris!)&#10;&#10;Catalano Framework 1.2/1.3 by:&#10;César de Souza, Diego Catalano.&#10;http://code.google.com/p/catalano-framework/&#10;&#10;imgscalr 4.2:&#10;http://www.thebuzzmedia.com/software/imgscalr-java-image-scaling-library/&#10;https://github.com/thebuzzmedia/imgscalr&#10;&#10;Many Thanks To G+ Communities:&#10;WebcamStudio Reloaded &amp; TrucklistStudio&#10;===========================&#10;j c-chord ; César Medrano Mariscal  ;&#10;Zach McCullough ; Enrique Avila ; Joshua lee&#10;Charles Maddox ; Uche Okonkwo ; Erikas Aubade ; &#10;Toby Leheup ; Robert Belcher ; T Anthony H Frisby  ; Chuck Daley  ;&#10;Andrew Silver ; Patrick Bulteel ; xaGe ; Micha el ;  RJVisser ; Eduardo Perez ;&#10;Apollo FM ; Angelocracy Xue ; Francisco Pedro ; Kevin Lausen ; Charles Kunkle Jr. ;&#10;BlogoMedia Best ; Ed Bespyatkin ; Nicola Spreafico ; Ronnie Tucker ; TBA ;&#10;DJ Mayo&#10;&#10;WebcamStudio Reloaded G+ Community:&#10;https://plus.google.com/communities/110329269823088092206&#10;&#10;Have a nice day!" />
+      <Label fx:id="lblVersion" layoutX="14.0" layoutY="365.0" />
+      <ImageView fitHeight="74.0" fitWidth="79.0" layoutX="33.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@resources/splashWS100.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

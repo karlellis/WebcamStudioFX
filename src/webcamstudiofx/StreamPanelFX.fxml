@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane fx:id="StreamPanelFX" prefWidth="635.0" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="webcamstudiofx.StreamPanelFXController">
+   <children>
+      <Label layoutX="20.0" layoutY="61.0" maxHeight="-Infinity" minHeight="20.0" prefHeight="20.0" text="x" />
+      <Slider fx:id="jslSpinX" blockIncrement="1.0" layoutX="240.0" layoutY="68.0" max="1280.0" min="-1280.0" minHeight="15.0" minorTickCount="1" prefHeight="16.0" prefWidth="379.0" AnchorPane.leftAnchor="240.0" AnchorPane.rightAnchor="16.0" />
+      <Label layoutX="20.0" layoutY="82.0" maxHeight="-Infinity" minHeight="20.0" prefHeight="20.0" text="y" />
+      <Slider fx:id="jslSpinY" blockIncrement="1.0" layoutX="240.0" layoutY="89.0" max="1024.0" min="-1024.0" minHeight="15.0" minorTickCount="1" prefHeight="16.0" prefWidth="379.0" AnchorPane.leftAnchor="240.0" AnchorPane.rightAnchor="16.0" />
+      <Label layoutX="20.0" layoutY="103.0" maxHeight="-Infinity" minHeight="20.0" prefHeight="20.0" text="Width" />
+      <Slider fx:id="jslSpinW" layoutX="240.0" layoutY="110.0" majorTickUnit="50.0" max="1280.0" min="1.0" minHeight="15.0" minorTickCount="1" prefHeight="16.0" prefWidth="379.0" AnchorPane.leftAnchor="240.0" AnchorPane.rightAnchor="16.0" />
+      <Label layoutX="20.0" layoutY="124.0" maxHeight="-Infinity" minHeight="20.0" prefHeight="20.0" text="Height" />
+      <Slider fx:id="jslSpinH" layoutX="240.0" layoutY="131.0" majorTickUnit="50.0" max="1024.0" min="1.0" minHeight="15.0" minorTickCount="1" prefHeight="16.0" prefWidth="379.0" AnchorPane.leftAnchor="240.0" AnchorPane.rightAnchor="16.0" />
+      <Label layoutX="20.0" layoutY="145.0" maxHeight="-Infinity" minHeight="20.0" prefHeight="20.0" text="Opacity" />
+      <Slider fx:id="jslSpinOpacity" layoutX="240.0" layoutY="148.0" majorTickUnit="10.0" minHeight="15.0" minorTickCount="1" prefHeight="16.0" prefWidth="379.0" snapToTicks="true" value="100.0" AnchorPane.leftAnchor="240.0" AnchorPane.rightAnchor="16.0" />
+      <Label layoutX="20.0" layoutY="166.0" maxHeight="-Infinity" minHeight="20.0" prefHeight="20.0" text="Layer" />
+      <Slider fx:id="jslSpinZOrder" layoutX="240.0" layoutY="171.0" majorTickUnit="1.0" max="10.0" min="-10.0" minHeight="15.0" minorTickCount="1" prefHeight="16.0" prefWidth="379.0" showTickMarks="true" snapToTicks="true" AnchorPane.leftAnchor="240.0" AnchorPane.rightAnchor="16.0" />
+      <Label layoutX="20.0" layoutY="238.0" maxHeight="-Infinity" minHeight="20.0" prefHeight="20.0" text="Video Delay" />
+      <Slider fx:id="jslSpinVDelay" blockIncrement="1.0" layoutX="240.0" layoutY="242.0" majorTickUnit="1.0" max="10000.0" minHeight="15.0" minorTickCount="1" prefHeight="16.0" prefWidth="379.0" AnchorPane.leftAnchor="240.0" AnchorPane.rightAnchor="16.0" />
+      <Label fx:id="lblADelay" layoutX="20.0" layoutY="259.0" maxHeight="-Infinity" minHeight="20.0" prefHeight="20.0" text="Audio Delay" />
+      <Slider fx:id="jslSpinADelay" layoutX="240.0" layoutY="263.0" majorTickUnit="1.0" max="10000.0" minHeight="15.0" minorTickCount="1" prefHeight="16.0" prefWidth="379.0" AnchorPane.leftAnchor="240.0" AnchorPane.rightAnchor="16.0" />
+      <Label fx:id="lblSeek" layoutX="20.0" layoutY="280.0" maxHeight="-Infinity" minHeight="20.0" prefHeight="20.0" text="Seek (sec)" />
+      <Slider fx:id="jslSpinSeek" blockIncrement="1.0" layoutX="240.0" layoutY="283.0" majorTickUnit="1.0" max="10000.0" minHeight="15.0" minorTickCount="1" prefHeight="16.0" prefWidth="379.0" AnchorPane.leftAnchor="240.0" AnchorPane.rightAnchor="16.0" />
+      <ToggleButton fx:id="tglAR" layoutX="82.0" layoutY="111.0" mnemonicParsing="false" onAction="#tglARAction" text="AR" />
+      <Label fx:id="lblVolume" layoutX="20.0" layoutY="40.0" maxHeight="-Infinity" minHeight="20.0" prefHeight="20.0" text="Volume" />
+      <Slider fx:id="jslSpinV" blockIncrement="1.0" layoutX="240.0" layoutY="43.0" max="200.0" minHeight="15.0" prefHeight="16.0" prefWidth="379.0" value="50.0" AnchorPane.leftAnchor="240.0" AnchorPane.rightAnchor="16.0" />
+      <ToolBar fx:id="streamToolBar" layoutY="193.0" prefHeight="34.0" prefWidth="200.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="4.0">
+         <items>
+            <ToggleButton fx:id="tglActiveStream" mnemonicParsing="false" onAction="#tglActiveStreamAction" text="Play/Stop" />
+            <ToggleButton fx:id="tglPause" mnemonicParsing="false" onAction="#tglPauseAction" text="Pause" />
+            <Separator orientation="VERTICAL" prefHeight="5.0" />
+            <ToggleButton fx:id="tglPreview" mnemonicParsing="false" onAction="#tglPreviewAction" prefHeight="10.0" text="Preview" />
+            <ToggleButton fx:id="tglAudio" mnemonicParsing="false" onAction="#tglAudioAction" prefHeight="10.0" text="No Audio" />
+            <ToggleButton fx:id="tglVideo" mnemonicParsing="false" onAction="#tglVideoAction" text="No Video" />
+            <ToggleButton fx:id="tglLoop" mnemonicParsing="false" onAction="#tglLoopAction" prefHeight="10.0" text="Loop" />
+            <Pane HBox.hgrow="ALWAYS" />
+            <Label fx:id="jlbDuration" text="Label" />
+            <Pane HBox.hgrow="ALWAYS" />
+         </items>
+         <effect>
+            <InnerShadow color="#a4a3a3" />
+         </effect>
+      </ToolBar>
+      <MenuBar layoutY="3.0" prefHeight="26.0" prefWidth="283.0" style="-fx-font-size: 10px;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="4.0">
+        <menus>
+          <Menu fx:id="jmScroll" mnemonicParsing="false" text="Scroll">
+            <items>
+                  <CheckMenuItem fx:id="jcbRightToLeft" mnemonicParsing="false" onAction="#jcbRightToLeftAction" text="RightToLeft" />
+                  <CheckMenuItem fx:id="jcbLeftToRight" mnemonicParsing="false" onAction="#jcbLeftToRightAction" text="LeftToRight" />
+                  <CheckMenuItem fx:id="jcbBottomToTop" mnemonicParsing="false" onAction="#jcbBottomToTopAction" text="BottomToTop" />
+                  <CheckMenuItem fx:id="jcbTopToBottom" mnemonicParsing="false" onAction="#jcbTopToBottomAction" text="TopToBottom" />
+                  <CheckMenuItem fx:id="jcbHBouncing" mnemonicParsing="false" onAction="#jcbHBouncingAction" text="H-Bouncing" />
+                  <Menu fx:id="jmSpeed" mnemonicParsing="false" text="Speed">
+                     <items>
+                        <RadioMenuItem fx:id="radioSpeed1" mnemonicParsing="false" onAction="#radioSpeed1Action" selected="true" text="1" />
+                        <RadioMenuItem fx:id="radioSpeed2" mnemonicParsing="false" onAction="#radioSpeed2Action" text="2" />
+                        <RadioMenuItem fx:id="radioSpeed3" mnemonicParsing="false" onAction="#radioSpeed3Action" text="3" />
+                        <RadioMenuItem fx:id="radioSpeed4" mnemonicParsing="false" onAction="#radioSpeed4Action" text="4" />
+                        <RadioMenuItem fx:id="radioSpeed5" mnemonicParsing="false" onAction="#radioSpeed5Action" text="5" />
+                     </items>
+                  </Menu>
+            </items>
+          </Menu>
+            <Menu fx:id="jmAudioSource" mnemonicParsing="false" text="Audio Source" />
+            <Menu fx:id="jmBackend" mnemonicParsing="false" text="BackEnd">
+               <items>
+                  <CheckMenuItem fx:id="jcbGStreamer" mnemonicParsing="false" onAction="#jcbGStreamerAction" text="GStreamer" />
+                  <CheckMenuItem fx:id="jcbLibAV" mnemonicParsing="false" onAction="#jcbLibAVAction" text="LibAV" />
+                  <CheckMenuItem fx:id="jcbFFmpeg" mnemonicParsing="false" onAction="#jcbFFmpegAction" text="FFmpeg" />
+               </items>
+            </Menu>
+        </menus>
+         <effect>
+            <InnerShadow color="#a4a2a2" />
+         </effect>
+      </MenuBar>
+      <Separator fx:id="leftSeparator" layoutX="9.0" layoutY="3.0" orientation="VERTICAL" prefHeight="317.0">
+         <effect>
+            <InnerShadow color="#a1a1a180" />
+         </effect>
+      </Separator>
+      <Separator fx:id="rightSeparator" layoutX="585.0" layoutY="3.0" orientation="VERTICAL" prefHeight="317.0" AnchorPane.rightAnchor="0.0">
+         <effect>
+            <InnerShadow color="#a1a1a17f" />
+         </effect>
+      </Separator>
+      <ToolBar fx:id="bottomBar" layoutY="310.0" prefHeight="10.0" prefWidth="631.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="4.0">
+         <effect>
+            <InnerShadow color="#a4a3a3" />
+         </effect>
+      </ToolBar>
+   </children>
+</AnchorPane>

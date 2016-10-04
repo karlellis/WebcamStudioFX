@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane fx:id="MosaicControlFX" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="webcamstudiofx.sources.effects.controls.MosaicControlFXController">
+   <children>
+      <GridPane AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <columnConstraints>
+          <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" vgrow="NEVER" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label text="Split Image (x) Times:" />
+            <Slider fx:id="sldSplitBox" blockIncrement="1.0" majorTickUnit="1.0" max="8.0" maxWidth="1.7976931348623157E308" min="2.0" showTickLabels="true" showTickMarks="true" snapToTicks="true" value="3.0" GridPane.rowIndex="1" />
+         </children>
+         <padding>
+            <Insets top="10.0" />
+         </padding>
+      </GridPane>
+   </children>
+</AnchorPane>

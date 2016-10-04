@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane fx:id="OutputPanelFX" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="webcamstudiofx.OutputPanelFXController">
+   <children>
+      <TabPane tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <tabs>
+          <Tab text="VirtualCam">
+               <content>
+                  <TitledPane fx:id="webcamOut" animated="false" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Virtual Cam">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0">
+                           <children>
+                              <VBox fx:id="webcamOutPanelArea" layoutX="239.0" layoutY="65.0" prefHeight="373.0" prefWidth="598.0" spacing="5.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <children>
+                                    <Label text="Pixel Format" />
+                                    <ComboBox fx:id="comboPixelFormat" prefWidth="150.0" />
+                                    <Separator prefWidth="200.0">
+                                       <effect>
+                                          <InnerShadow color="#bababac1" />
+                                       </effect>
+                                       <opaqueInsets>
+                                          <Insets />
+                                       </opaqueInsets>
+                                       <VBox.margin>
+                                          <Insets top="3.0" />
+                                       </VBox.margin>
+                                    </Separator>
+                                    <Label text="Virtual Cams" />
+                                 </children>
+                              </VBox>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </TitledPane>
+               </content>
+            </Tab>
+          <Tab text="DefaultOut">
+               <content>
+                  <TitledPane fx:id="defaultOut" animated="false" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Default Out">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0">
+                           <children>
+                              <VBox fx:id="outputPanelArea" layoutX="239.0" layoutY="65.0" spacing="5.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <children>
+                                    <Label text="Defaults:" />
+                                    <ToggleButton fx:id="tglAudioOut" mnemonicParsing="false" onAction="#tglAudioOutAction" text="Audio Output" />
+                                    <ToggleButton fx:id="tglRecordToFile" mnemonicParsing="false" onAction="#tglRecordToFileAction" text="Record" />
+                                    <ToggleButton fx:id="tglUDP" mnemonicParsing="false" onAction="#tglUDPAction" text="UDP Mpeg2 Out" />
+                                    <Separator prefWidth="200.0">
+                                       <effect>
+                                          <InnerShadow color="#bababac1" />
+                                       </effect>
+                                       <opaqueInsets>
+                                          <Insets />
+                                       </opaqueInsets>
+                                       <VBox.margin>
+                                          <Insets top="3.0" />
+                                       </VBox.margin>
+                                    </Separator>
+                                    <Label text="FMEs:" />
+                                    <Button fx:id="btnAddFME" mnemonicParsing="false" onAction="#btnAddFMEAction" text="Add FME" />
+                                 </children>
+                              </VBox>
+                           </children>
+                        </AnchorPane>
+                    </content>
+                  </TitledPane>
+               </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

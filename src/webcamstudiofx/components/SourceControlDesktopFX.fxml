@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane fx:id="SourceControlDesktopFX" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="webcamstudiofx.components.SourceControlDesktopFXController">
+   <children>
+      <GridPane fx:id="deskGrid" hgap="15.0" layoutX="185.0" layoutY="155.0" prefHeight="400.0" prefWidth="600.0" vgap="5.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="0.0">
+        <columnConstraints>
+          <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <padding>
+            <Insets bottom="10.0" />
+         </padding>
+         <children>
+            <Label fx:id="lblDesktopX" text="Desktop at (X)" />
+            <Label fx:id="lblDesktopY" text="Desktop at (Y)" GridPane.rowIndex="1" />
+            <Label fx:id="lblDesktopW" text="Desktop Width" GridPane.rowIndex="2" />
+            <Label fx:id="lblDesktopH" text="Desktop Height" GridPane.rowIndex="3" />
+            <Label fx:id="lblDesktopRate" text="Desktop Rate" GridPane.rowIndex="4" />
+            <Label fx:id="lblDesktopN" text="Screen Number" GridPane.rowIndex="5" />
+            <CheckBox fx:id="jchEnableWindowsCap" mnemonicParsing="false" onAction="#jchEnableWindowsCapAction" text="Window Capture" GridPane.rowIndex="6" />
+            <Label fx:id="lblWindowsCap" text="Window Capture" GridPane.rowIndex="7" />
+            <ComboBox fx:id="jcbWindowsCapList" onAction="#jcbWindowsCapListAction" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+            <Button fx:id="btnRefreshWindowsList" mnemonicParsing="false" onAction="#btnRefreshWindowsListAction" text="Refresh Windows" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+         </children>
+      </GridPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:id="RemoteSettingsFX" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="181.0" prefWidth="328.0" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="webcamstudiofx.components.RemoteSettingsFXController">
+   <children>
+      <Label fx:id="lblName" alignment="CENTER" layoutX="15.0" layoutY="7.0" prefHeight="30.0" prefWidth="337.0" text="Remote Control Settings" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="15.0" layoutY="81.0" text="Password:" />
+      <Label layoutX="15.0" layoutY="113.0" text="Remote Port:" />
+      <Button fx:id="btnOK" layoutX="15.0" layoutY="142.0" mnemonicParsing="false" onAction="#btnOKAction" text="Ok" />
+      <Button fx:id="btnCancel" layoutX="61.0" layoutY="142.0" mnemonicParsing="false" onAction="#btnCancelAction" text="Cancel" />
+      <PasswordField fx:id="pswPassword" layoutX="106.0" layoutY="76.0" prefHeight="26.0" prefWidth="207.0" AnchorPane.rightAnchor="15.0" />
+      <Label layoutX="15.0" layoutY="49.0" text="User:" />
+      <TextField fx:id="txtUser" layoutX="71.0" layoutY="44.0" prefHeight="26.0" prefWidth="242.0" AnchorPane.rightAnchor="15.0" />
+   </children>
+</AnchorPane>

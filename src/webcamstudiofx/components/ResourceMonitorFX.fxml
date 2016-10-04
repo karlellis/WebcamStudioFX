@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<HBox fx:id="ResourceMonitorFX" alignment="CENTER_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="31.0" prefWidth="670.0" spacing="10.0" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="webcamstudiofx.components.ResourceMonitorFXController">
+   <children>
+      <AnchorPane fx:id="memAnchor" minWidth="200.0" prefHeight="200.0" prefWidth="200.0" />
+      <Label fx:id="lblFPS" minWidth="30.0" text="Label">
+         <effect>
+            <InnerShadow />
+         </effect></Label>
+      <Label fx:id="lblMixerSize" minWidth="60.0" text="Label">
+         <effect>
+            <InnerShadow />
+         </effect></Label>
+      <Separator orientation="VERTICAL">
+         <effect>
+            <InnerShadow color="#8f8d8dc2" />
+         </effect>
+      </Separator>
+   </children>
+</HBox>

@@ -1,0 +1,390 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.media.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane fx:id="truckliststudioFX" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="764.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="webcamstudiofx.TruckliststudioUIController">
+   <children>
+      <SplitPane fx:id="mainVerticalSplit" dividerPositions="0.5984251968503937" layoutX="129.0" layoutY="64.0" orientation="VERTICAL" prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+               <children>
+                  <SplitPane fx:id="mainHorizontalSplit" dividerPositions="0.2139498432601881" layoutX="144.0" layoutY="37.0" prefHeight="219.0" prefWidth="598.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="37.0">
+                    <items>
+                      <AnchorPane fx:id="topLPane" minHeight="0.0" minWidth="0.0" prefHeight="413.0" prefWidth="250.0" SplitPane.resizableWithParent="false" />
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                           <children>
+                              <SplitPane fx:id="mainSplit" dividerPositions="0.7336538461538461" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="254.0" prefWidth="444.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                <items>
+                                  <AnchorPane fx:id="panSources" minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                                       <children>
+                                          <ToolBar prefHeight="0.0" prefWidth="306.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                            <items>
+                                              <Button fx:id="btnAddFile" contentDisplay="GRAPHIC_ONLY" mnemonicParsing="false" onAction="#btnAddFileAction" text="Media">
+                                                   <tooltip>
+                                                      <Tooltip text="Load Media" />
+                                                   </tooltip>
+                                                   <graphic>
+                                                      <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@resources/tango/studio-add.png" />
+                                                         </image>
+                                                      </ImageView>
+                                                   </graphic>
+                                                   <padding>
+                                                      <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                                   </padding></Button>
+                                                <Button fx:id="btnAddFolder" contentDisplay="GRAPHIC_ONLY" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#btnAddFolderAction" text="Folder">
+                                                   <tooltip>
+                                                      <Tooltip text="Import Media Folder" />
+                                                   </tooltip>
+                                                   <graphic>
+                                                      <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@resources/tango/media-add-folder.png" />
+                                                         </image>
+                                                      </ImageView>
+                                                   </graphic>
+                                                   <padding>
+                                                      <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                                   </padding></Button>
+                                                <Button fx:id="btnAddText" contentDisplay="GRAPHIC_ONLY" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#btnAddTextAction" text="Text">
+                                                   <tooltip>
+                                                      <Tooltip text="Add Text/Timer/QRCode" />
+                                                   </tooltip>
+                                                   <graphic>
+                                                      <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@resources/tango/accessories-text-editor.png" />
+                                                         </image>
+                                                      </ImageView>
+                                                   </graphic>
+                                                   <padding>
+                                                      <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                                   </padding></Button>
+                                                <Button fx:id="btnAddAudio" contentDisplay="GRAPHIC_ONLY" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#btnAddAudioAction" text="Audio">
+                                                   <tooltip>
+                                                      <Tooltip text="Add Audio Source" />
+                                                   </tooltip>
+                                                   <graphic>
+                                                      <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@resources/tango/audio-volume-high.png" />
+                                                         </image>
+                                                      </ImageView>
+                                                   </graphic>
+                                                   <padding>
+                                                      <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                                   </padding></Button>
+                                                <Button fx:id="btnAddDesktop" contentDisplay="GRAPHIC_ONLY" mnemonicParsing="false" onAction="#btnAddDesktopAction" text="Desktop">
+                                                   <tooltip>
+                                                      <Tooltip text="Add Desktop" />
+                                                   </tooltip>
+                                                   <graphic>
+                                                      <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@resources/tango/user-desktop.png" />
+                                                         </image>
+                                                      </ImageView>
+                                                   </graphic>
+                                                   <padding>
+                                                      <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                                   </padding></Button>
+                                                <Separator orientation="VERTICAL" />
+                                                <ComboBox fx:id="cboAnimations" />
+                                                <Button fx:id="btnAddAnimation" mnemonicParsing="false" onAction="#btnAddAnimationAction" text="Add" />
+                                                <Separator orientation="VERTICAL" />
+                                                <ToggleButton fx:id="tglAutoAR" contentDisplay="GRAPHIC_ONLY" mnemonicParsing="false" onAction="#tglAutoARAction">
+                                                   <tooltip>
+                                                      <Tooltip text="Automatic A/R detection Switch." />
+                                                   </tooltip>
+                                                   <padding>
+                                                      <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                                   </padding></ToggleButton>
+                                                <ToggleButton fx:id="tglAutoTrack" contentDisplay="GRAPHIC_ONLY" mnemonicParsing="false" onAction="#tglAutoTrackAction">
+                                                   <tooltip>
+                                                      <Tooltip text="Automatic &quot;Make a Track&quot; Switch." />
+                                                   </tooltip>
+                                                   <padding>
+                                                      <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                                   </padding></ToggleButton>
+                                                <Separator orientation="VERTICAL" />
+                                                <Button fx:id="btnRemoveSource" contentDisplay="GRAPHIC_ONLY" mnemonicParsing="false" onAction="#btnRemoveSourceAction" text="Remove">
+                                                   <tooltip>
+                                                      <Tooltip text="Remove selected Source." />
+                                                   </tooltip>
+                                                   <graphic>
+                                                      <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@resources/tango/process-stop.png" />
+                                                         </image>
+                                                      </ImageView>
+                                                   </graphic>
+                                                   <padding>
+                                                      <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                                   </padding></Button>
+                                            </items>
+                                          </ToolBar>
+                                          <TabPane fx:id="tabSources" prefHeight="178.0" prefWidth="306.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="37.0">
+                                            <tabs>
+                                                <Tab>
+                                                   <content>
+                                                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="72.0" prefWidth="306.0">
+                                                         <children>
+                                                            <ScrollPane fitToHeight="true" fitToWidth="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                               <content>
+                                                                  <Accordion fx:id="webcamDesktop" prefHeight="341.0" prefWidth="727.0" />
+                                                               </content>
+                                                            </ScrollPane>
+                                                         </children>
+                                                      </AnchorPane>
+                                                   </content>
+                                                </Tab>
+                                              <Tab>
+                                                <content>
+                                                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="72.0" prefWidth="306.0">
+                                                         <children>
+                                                            <ScrollPane fitToHeight="true" fitToWidth="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                               <content>
+                                                                  <Accordion fx:id="videoDesktop" prefHeight="341.0" prefWidth="727.0" />
+                                                               </content>
+                                                            </ScrollPane>
+                                                         </children></AnchorPane>
+                                                </content>
+                                              </Tab>
+                                              <Tab>
+                                                <content>
+                                                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                                         <children>
+                                                            <ScrollPane fitToHeight="true" fitToWidth="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                               <content>
+                                                                  <Accordion fx:id="musicDesktop" prefHeight="341.0" prefWidth="727.0" />
+                                                               </content>
+                                                            </ScrollPane>
+                                                         </children></AnchorPane>
+                                                </content>
+                                              </Tab>
+                                                <Tab>
+                                                  <content>
+                                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                                         <children>
+                                                            <ScrollPane fitToHeight="true" fitToWidth="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                               <content>
+                                                                  <Accordion fx:id="pictureDesktop" prefHeight="341.0" prefWidth="727.0" />
+                                                               </content>
+                                                            </ScrollPane>
+                                                         </children></AnchorPane>
+                                                  </content>
+                                                </Tab>
+                                                <Tab>
+                                                  <content>
+                                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                                         <children>
+                                                            <ScrollPane fitToHeight="true" fitToWidth="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                               <content>
+                                                                  <Accordion fx:id="textDesktop" prefHeight="341.0" prefWidth="727.0" />
+                                                               </content>
+                                                            </ScrollPane>
+                                                         </children></AnchorPane>
+                                                  </content>
+                                                </Tab>
+                                                <Tab>
+                                                  <content>
+                                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                                         <children>
+                                                            <ScrollPane fitToHeight="true" fitToWidth="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                               <content>
+                                                                  <Accordion fx:id="audioInDesktop" prefHeight="341.0" prefWidth="727.0" />
+                                                               </content>
+                                                            </ScrollPane>
+                                                         </children></AnchorPane>
+                                                  </content>
+                                                </Tab>
+                                                <Tab>
+                                                   <content>
+                                                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                                         <children>
+                                                            <ScrollPane fitToHeight="true" fitToWidth="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                               <content>
+                                                                  <Accordion fx:id="desktopDesktop" prefHeight="341.0" prefWidth="727.0" />
+                                                               </content>
+                                                            </ScrollPane>
+                                                         </children>
+                                                      </AnchorPane>
+                                                   </content>
+                                                </Tab>
+                                            </tabs>
+                                          </TabPane>
+                                       </children></AnchorPane>
+                                  <AnchorPane fx:id="controlPane" minHeight="0.0" minWidth="0.0">
+                                       <children>
+                                          <TabPane fx:id="controlTab" prefHeight="382.0" prefWidth="262.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                          <Label fx:id="lblSourceSelected" layoutX="83.0" layoutY="385.0" text="None" AnchorPane.bottomAnchor="10.0" />
+                                          <Label layoutX="14.0" layoutY="385.0" text="Selected:" AnchorPane.bottomAnchor="10.0" />
+                                       </children></AnchorPane>
+                                </items>
+                              </SplitPane>
+                           </children></AnchorPane>
+                    </items>
+                  </SplitPane>
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+               <children>
+                  <SplitPane fx:id="mainBottomSplit" dividerPositions="0.7701342281879194" layoutX="207.0" layoutY="-13.0" prefHeight="134.0" prefWidth="598.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <items>
+                      <AnchorPane fx:id="bottomLPane" minHeight="0.0" minWidth="700.0" prefHeight="160.0" prefWidth="100.0" />
+                      <AnchorPane fx:id="bottomRPane" minHeight="0.0" minWidth="250.0" prefHeight="160.0" prefWidth="100.0" />
+                    </items>
+                  </SplitPane>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+      <ToolBar prefHeight="25.0" prefWidth="600.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <items>
+          <Button fx:id="btnNewStudio" contentDisplay="GRAPHIC_ONLY" mnemonicParsing="false" onAction="#btnNewStudioAction" text="New">
+               <graphic>
+                  <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@resources/tango/document-new.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <padding>
+                  <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+               </padding>
+               <tooltip>
+                  <Tooltip text="New Studio" />
+               </tooltip></Button>
+            <Button fx:id="btnLoadStudio" contentDisplay="GRAPHIC_ONLY" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#btnLoadStudioAction" text="Open">
+               <tooltip>
+                  <Tooltip text="Load Studio" />
+               </tooltip>
+               <graphic>
+                  <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@resources/tango/document-open.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <padding>
+                  <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+               </padding></Button>
+            <Button fx:id="btnImportStudio" contentDisplay="GRAPHIC_ONLY" layoutX="76.0" layoutY="10.0" mnemonicParsing="false" onAction="#btnImportStudioAction" text="Import">
+               <tooltip>
+                  <Tooltip text="Import Studio" />
+               </tooltip>
+               <graphic>
+                  <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@resources/tango/chan-add.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <padding>
+                  <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+               </padding></Button>
+            <Button fx:id="btnSaveStudio" contentDisplay="GRAPHIC_ONLY" layoutX="142.0" layoutY="10.0" mnemonicParsing="false" onAction="#btnSaveStudioAction" text="Save">
+               <graphic>
+                  <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@resources/tango/document-save.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <tooltip>
+                  <Tooltip text="Save Studio" />
+               </tooltip>
+               <padding>
+                  <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+               </padding></Button>
+            <Button fx:id="btnAbout" contentDisplay="GRAPHIC_ONLY" layoutX="208.0" layoutY="10.0" mnemonicParsing="false" onAction="#btnAboutAction" text="About">
+               <tooltip>
+                  <Tooltip text="About" />
+               </tooltip>
+               <graphic>
+                  <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@resources/tango/user-info.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <padding>
+                  <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+               </padding></Button>
+            <Separator orientation="VERTICAL" />
+            <ComboBox fx:id="cboWebcam">
+               <tooltip>
+                  <Tooltip text="Detected Video Devices" />
+               </tooltip></ComboBox>
+            <Button fx:id="btnAddWebcams" mnemonicParsing="false" onAction="#btnAddWebcamsAction" text="Add" />
+            <Separator orientation="VERTICAL" />
+            <Label fx:id="lblAudioFreq" contentDisplay="GRAPHIC_ONLY" text="Audio">
+               <graphic>
+                  <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@resources/tango/audio-Hz.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <padding>
+                  <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+               </padding></Label>
+            <ComboBox fx:id="cboAudioHz" onAction="#cboAudioHzAction">
+               <tooltip>
+                  <Tooltip text="Master Audio Sample Rate" />
+               </tooltip></ComboBox>
+            <Separator orientation="VERTICAL" />
+            <Label fx:id="lblThemeSwitch" contentDisplay="GRAPHIC_ONLY" text="Theme">
+               <graphic>
+                  <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@resources/tango/image-x-generic.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <padding>
+                  <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+               </padding></Label>
+            <ComboBox fx:id="cboTheme" onAction="#cboThemeAction">
+               <tooltip>
+                  <Tooltip text="Master Theme Selector" />
+               </tooltip></ComboBox>
+            <Separator orientation="VERTICAL" />
+            <Button fx:id="btnSysGC" mnemonicParsing="false" onAction="#btnSysGCAction" text="RAM">
+               <tooltip>
+                  <Tooltip text="Try to Clean Up some memory" />
+               </tooltip></Button>
+            <Separator orientation="VERTICAL" />
+            <Button fx:id="btnResetPrefs" mnemonicParsing="false" onAction="#btnResetPrefsAction" text="Reset">
+               <tooltip>
+                  <Tooltip text="Reset All Preferences" />
+               </tooltip></Button>
+            <Pane HBox.hgrow="ALWAYS" />
+            <Label text="OUT BackEnd:" />
+            <ToggleButton fx:id="tglFFmpeg" mnemonicParsing="false" onAction="#tglFFmpegAction" text="FFmpeg">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </ToggleButton>
+            <ToggleButton fx:id="tglAVconv" mnemonicParsing="false" onAction="#tglAVconvAction" text="Libav">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </ToggleButton>
+            <ToggleButton fx:id="tglGST" mnemonicParsing="false" onAction="#tglGSTAction" text="GStreamer">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </ToggleButton>
+        </items>
+      </ToolBar>
+   </children>
+</AnchorPane>

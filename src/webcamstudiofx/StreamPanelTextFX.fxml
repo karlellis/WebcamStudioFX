@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane fx:id="StreamPanelTextFX" prefWidth="635.0" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="webcamstudiofx.StreamPanelTextFXController">
+   <children>
+      <Label layoutX="20.0" layoutY="168.0" maxHeight="-Infinity" minHeight="20.0" prefHeight="20.0" text="x" />
+      <Slider fx:id="jslSpinX" blockIncrement="1.0" layoutX="240.0" layoutY="175.0" max="1280.0" min="-1280.0" minHeight="15.0" minorTickCount="1" prefHeight="16.0" prefWidth="379.0" AnchorPane.leftAnchor="240.0" AnchorPane.rightAnchor="16.0" />
+      <Label layoutX="20.0" layoutY="190.0" maxHeight="-Infinity" minHeight="20.0" prefHeight="20.0" text="y" />
+      <Slider fx:id="jslSpinY" blockIncrement="1.0" layoutX="240.0" layoutY="197.0" max="1024.0" min="-1024.0" minHeight="15.0" minorTickCount="1" prefHeight="16.0" prefWidth="379.0" AnchorPane.leftAnchor="240.0" AnchorPane.rightAnchor="16.0" />
+      <Label layoutX="20.0" layoutY="212.0" maxHeight="-Infinity" minHeight="20.0" prefHeight="20.0" text="Width" />
+      <Slider fx:id="jslSpinW" layoutX="240.0" layoutY="219.0" majorTickUnit="50.0" max="1280.0" min="1.0" minHeight="15.0" minorTickCount="1" prefHeight="16.0" prefWidth="379.0" AnchorPane.leftAnchor="240.0" AnchorPane.rightAnchor="16.0" />
+      <Label layoutX="20.0" layoutY="234.0" maxHeight="-Infinity" minHeight="20.0" prefHeight="20.0" text="Height" />
+      <Slider fx:id="jslSpinH" layoutX="240.0" layoutY="241.0" majorTickUnit="50.0" max="1024.0" min="1.0" minHeight="15.0" minorTickCount="1" prefHeight="16.0" prefWidth="379.0" AnchorPane.leftAnchor="240.0" AnchorPane.rightAnchor="16.0" />
+      <Label layoutX="20.0" layoutY="256.0" maxHeight="-Infinity" minHeight="20.0" prefHeight="20.0" text="Layer" />
+      <Slider fx:id="jslSpinZOrder" layoutX="240.0" layoutY="263.0" majorTickUnit="1.0" max="10.0" min="-10.0" minHeight="15.0" minorTickCount="1" prefHeight="16.0" prefWidth="379.0" showTickMarks="true" snapToTicks="true" AnchorPane.leftAnchor="240.0" AnchorPane.rightAnchor="16.0" />
+      <Label layoutX="20.0" layoutY="111.0" maxHeight="-Infinity" minHeight="20.0" prefHeight="20.0" text="Font" />
+      <Label layoutX="20.0" layoutY="138.0" maxHeight="-Infinity" minHeight="20.0" prefHeight="20.0" text="Color" />
+      <ToggleButton fx:id="tglAR" layoutX="82.0" layoutY="220.0" mnemonicParsing="false" onAction="#tglARAction" text="AR" />
+      <Label layoutX="141.0" layoutY="71.0" maxHeight="-Infinity" minHeight="20.0" prefHeight="20.0" text="Timer" />
+      <ToolBar layoutY="285.0" prefHeight="34.0" prefWidth="200.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="4.0">
+         <items>
+            <ToggleButton fx:id="tglActiveStream" mnemonicParsing="false" onAction="#tglActiveStreamAction" text="Play/Stop" />
+            <Separator orientation="VERTICAL" prefHeight="5.0" />
+            <ToggleButton fx:id="tglPreview" mnemonicParsing="false" onAction="#tglPreviewAction" prefHeight="10.0" text="Preview" />
+            <Pane HBox.hgrow="ALWAYS" />
+            <Label fx:id="lblTxtMode" text="Label" />
+            <Pane HBox.hgrow="ALWAYS" />
+         </items>
+         <effect>
+            <InnerShadow color="#a4a3a3" />
+         </effect>
+      </ToolBar>
+      <MenuBar layoutY="3.0" prefHeight="26.0" prefWidth="283.0" style="-fx-font-size: 10px;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="4.0">
+         <menus>
+            <Menu fx:id="jmScroll" mnemonicParsing="false" text="Scroll">
+               <items>
+                  <CheckMenuItem fx:id="jcbRightToLeft" mnemonicParsing="false" onAction="#jcbRightToLeftAction" text="RightToLeft" />
+                  <CheckMenuItem fx:id="jcbLeftToRight" mnemonicParsing="false" onAction="#jcbLeftToRightAction" text="LeftToRight" />
+                  <CheckMenuItem fx:id="jcbBottomToTop" mnemonicParsing="false" onAction="#jcbBottomToTopAction" text="BottomToTop" />
+                  <CheckMenuItem fx:id="jcbTopToBottom" mnemonicParsing="false" onAction="#jcbTopToBottomAction" text="TopToBottom" />
+                  <CheckMenuItem fx:id="jcbHBouncing" mnemonicParsing="false" onAction="#jcbHBouncingAction" text="H-Bouncing" />
+                  <Menu fx:id="jmSpeed" mnemonicParsing="false" text="Speed">
+                     <items>
+                        <RadioMenuItem fx:id="radioSpeed1" mnemonicParsing="false" onAction="#radioSpeed1Action" selected="true" text="1" />
+                        <RadioMenuItem fx:id="radioSpeed2" mnemonicParsing="false" onAction="#radioSpeed2Action" text="2" />
+                        <RadioMenuItem fx:id="radioSpeed3" mnemonicParsing="false" onAction="#radioSpeed3Action" text="3" />
+                        <RadioMenuItem fx:id="radioSpeed4" mnemonicParsing="false" onAction="#radioSpeed4Action" text="4" />
+                        <RadioMenuItem fx:id="radioSpeed5" mnemonicParsing="false" onAction="#radioSpeed5Action" text="5" />
+                     </items>
+                  </Menu>
+               </items>
+            </Menu>
+         </menus>
+         <effect>
+            <InnerShadow color="#a4a2a2" />
+         </effect>
+      </MenuBar>
+      <Separator layoutX="9.0" layoutY="3.0" orientation="VERTICAL" prefHeight="335.0">
+         <effect>
+            <InnerShadow color="#a1a1a180" />
+         </effect>
+      </Separator>
+      <Separator layoutX="585.0" layoutY="3.0" orientation="VERTICAL" prefHeight="335.0" AnchorPane.rightAnchor="0.0">
+         <effect>
+            <InnerShadow color="#a1a1a17f" />
+         </effect>
+      </Separator>
+      <ToolBar layoutY="327.0" prefHeight="10.0" prefWidth="631.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="4.0">
+         <effect>
+            <InnerShadow color="#a4a3a3" />
+         </effect>
+      </ToolBar>
+      <CheckBox fx:id="jcbPlaylist" layoutX="20.0" layoutY="72.0" mnemonicParsing="false" onAction="#jcbPlaylistAction" text="Playlist Mode" />
+      <ComboBox fx:id="cboFonts" layoutX="124.0" layoutY="109.0" minHeight="25.0" onAction="#cboFontsAction" prefHeight="20.0" prefWidth="150.0" />
+      <ColorPicker fx:id="txtHexColor" layoutX="124.0" layoutY="136.0" minHeight="25.0" onAction="#txtHexColorAction" prefHeight="25.0" />
+      <TextArea fx:id="txtArea" layoutX="288.0" layoutY="39.0" onKeyReleased="#txtAreaKeyReleasedAction" prefHeight="123.0" prefWidth="324.0" AnchorPane.leftAnchor="295.0" AnchorPane.rightAnchor="16.0" />
+      <ToggleButton fx:id="tglCDown" layoutX="20.0" layoutY="39.0" mnemonicParsing="false" onAction="#tglCDownAction" prefHeight="10.0" text="Countdown" />
+      <ToggleButton fx:id="tglClock" layoutX="115.0" layoutY="39.0" mnemonicParsing="false" onAction="#tglClockAction" text="Date/Clock" />
+      <ToggleButton fx:id="tglQRCode" layoutX="207.0" layoutY="39.0" mnemonicParsing="false" onAction="#tglQRCodeAction" prefHeight="10.0" text="QRCode" />
+      <Separator layoutX="20.0" layoutY="98.0" prefHeight="0.0" prefWidth="258.0">
+         <effect>
+            <InnerShadow color="#a19d9dc2" />
+         </effect>
+         <opaqueInsets>
+            <Insets right="1.0" />
+         </opaqueInsets>
+      </Separator>
+   </children>
+</AnchorPane>

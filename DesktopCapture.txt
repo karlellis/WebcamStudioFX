@@ -1,0 +1,4 @@
+To use the Desktop Capture feature Under Windows, please install "screen-capture-recorder" downloading the installer (Setup Screen Capturer Recorder v0.12.8.exe) from:
+http://sourceforge.net/projects/screencapturer/files/
+... and then launch WebcamStudioFX.
+karl

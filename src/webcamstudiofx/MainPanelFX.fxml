@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane fx:id="mainPanelFX" minHeight="0.0" minWidth="0.0" prefHeight="413.0" prefWidth="262.0" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="webcamstudiofx.MainPanelFXController">
+   <children>
+      <TabPane layoutX="14.0" layoutY="137.0" prefHeight="266.0" prefWidth="240.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0">
+         <tabs>
+            <Tab text="Mixer">
+               <content>
+                  <Pane fx:id="tabMixer">
+                     <children>
+                        <Label layoutX="14.0" layoutY="14.0" text="Width" />
+                        <Label layoutX="14.0" layoutY="44.0" text="Height" />
+                        <Label layoutX="14.0" layoutY="76.0" text="FPS" />
+                        <Button fx:id="btnFullScreen" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" graphicTextGap="0.0" layoutX="172.0" layoutY="103.0" mnemonicParsing="false" onAction="#btnFullScreenAction" prefHeight="26.0" prefWidth="14.0">
+                           <graphic>
+                              <ImageView fitHeight="22.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@resources/tango/view-fullscreen.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                           <padding>
+                              <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                           </padding>
+                           <tooltip>
+                              <Tooltip text="LiVEview window." />
+                           </tooltip></Button>
+                        <Label layoutX="90.0" layoutY="138.0" text="Master Volume" />
+                        <Slider fx:id="jslMasterVolume" blockIncrement="1.0" layoutX="44.0" layoutY="160.0" min="-100.0" minorTickCount="1" prefHeight="38.0" prefWidth="191.0" showTickLabels="true" showTickMarks="true" snapToTicks="true" />
+                        <Button fx:id="btnApply" layoutX="14.0" layoutY="202.0" mnemonicParsing="false" onAction="#btnApplyAction" prefHeight="26.0" prefWidth="71.0" text="Apply" />
+                        <Button fx:id="btnApplyToStreams" layoutX="91.0" layoutY="202.0" mnemonicParsing="false" onAction="#btnApplyToStreamsAction" prefHeight="26.0" prefWidth="137.0" text="Apply to Streams" />
+                        <ToggleButton fx:id="tglLockRatio" layoutX="163.0" layoutY="24.0" mnemonicParsing="false" onAction="#tglLockRatioAction" prefHeight="26.0" prefWidth="45.0" text="A/R" />
+                        <ToggleButton fx:id="tglSound" contentDisplay="GRAPHIC_ONLY" layoutX="204.0" layoutY="103.0" mnemonicParsing="false" onAction="#tglSoundAction" prefHeight="26.0" prefWidth="26.0" text="Java audio">
+                           <graphic>
+                              <ImageView fitHeight="22.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@resources/tango/audio-card.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <padding>
+                              <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                           </padding>
+                           <tooltip>
+                              <Tooltip text="Java Audio Out" />
+                           </tooltip></ToggleButton>
+                        <ComboBox fx:id="cboViewRate" layoutX="94.0" layoutY="103.0" onAction="#cboViewRateAction" prefHeight="26.0" prefWidth="64.0">
+                           <tooltip>
+                              <Tooltip text="Set Viewer fps (Low values, lower CPU Usage)" />
+                           </tooltip></ComboBox>
+                        <Label layoutX="14.0" layoutY="108.0" text="Viewer FPS:" />
+                        <ImageView fitHeight="22.0" fitWidth="22.0" layoutX="16.0" layoutY="160.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@resources/tango/volume_icon_25.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+               </content>
+            </Tab>
+            <Tab text="Preview">
+               <content>
+                  <Pane prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <Pane fx:id="panelPreview" layoutY="3.0" prefHeight="110.0" prefWidth="240.0" />
+                        <Slider fx:id="jslOpacity" blockIncrement="1.0" layoutX="2.0" layoutY="139.0" minorTickCount="1" prefHeight="38.0" prefWidth="232.0" showTickLabels="true" showTickMarks="true" value="50.0" />
+                        <Label layoutX="72.0" layoutY="118.0" text="Preview Fader" />
+                        <Button fx:id="btnPreview" layoutX="10.0" layoutY="177.0" mnemonicParsing="false" onAction="#btnPreviewAction" prefHeight="26.0" prefWidth="217.0" text="Preview window">
+                           <graphic>
+                              <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@resources/tango/view-fullscreen.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <padding>
+                              <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                           </padding></Button>
+                     </children>
+                  </Pane>
+               </content>
+            </Tab>
+         </tabs>
+      </TabPane>
+      <Pane fx:id="panelLiveView" layoutX="15.0" layoutY="14.0" prefHeight="110.0" prefWidth="240.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="14.0" />
+   </children>
+</AnchorPane>

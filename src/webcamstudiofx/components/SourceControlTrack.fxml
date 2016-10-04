@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane fx:id="SourceControlTracksFX" maxHeight="250.0" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="webcamstudiofx.components.SourceControlTrackController">
+   <children>
+      <GridPane alignment="CENTER" prefHeight="172.0" prefWidth="332.0" vgap="10.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="0.0">
+        <columnConstraints>
+          <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label alignment="CENTER" maxWidth="1.7976931348623157E308" text="Copy current Stream settings to all Tracks:" />
+            <Button fx:id="btnApplyAllTrk" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#btnApplyAllTrkAction" text="Copy state &amp; settings" GridPane.rowIndex="1">
+               <graphic>
+                  <ImageView>
+                     <image>
+                        <Image url="@../resources/tango/chan-app4.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="btnApplyAllTrkSet" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#btnApplyAllTrkSetAction" text="Copy only settings" GridPane.rowIndex="2">
+               <graphic>
+                  <ImageView>
+                     <image>
+                        <Image url="@../resources/tango/chan-app3.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="btnApplyAllTrkPos" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#btnApplyAllTrkPosAction" text="Copy only style &amp; position" GridPane.rowIndex="3">
+               <graphic>
+                  <ImageView>
+                     <image>
+                        <Image url="@../resources/tango/chan-app5.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="btnMakeATrack" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#btnMakeATrackAction" text="Make a Track" GridPane.rowIndex="4">
+               <graphic>
+                  <ImageView>
+                     <image>
+                        <Image url="@../resources/tango/chan-app6.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </GridPane>
+   </children>
+</AnchorPane>

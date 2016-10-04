@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane fx:id="RGBControlFX" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="webcamstudiofx.sources.effects.controls.RGBControlFXController">
+   <children>
+      <GridPane AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <columnConstraints>
+          <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Slider fx:id="sliderRed" max="200.0" maxWidth="1.7976931348623157E308" minorTickCount="1" showTickMarks="true" value="100.0">
+               <effect>
+                  <InnerShadow color="#d00b0b" />
+               </effect>
+            </Slider>
+            <Slider fx:id="sliderGreen" max="200.0" maxWidth="1.7976931348623157E308" minorTickCount="1" showTickMarks="true" value="100.0" GridPane.rowIndex="1">
+               <effect>
+                  <InnerShadow color="#0ccf16" />
+               </effect>
+            </Slider>
+            <Slider fx:id="sliderBlue" max="200.0" maxWidth="1.7976931348623157E308" minorTickCount="1" showTickMarks="true" value="100.0" GridPane.rowIndex="2">
+               <effect>
+                  <InnerShadow color="#130ccf" />
+               </effect>
+            </Slider>
+         </children>
+      </GridPane>
+   </children>
+</AnchorPane>
